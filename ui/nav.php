@@ -73,7 +73,12 @@
             
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span id="profile">Login</span><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu"'>
+<<<<<<< HEAD
 			      <script src="<?php echo $path_fix."ui/profile.php?".rand() ?>"> </script>
+=======
+			<script src="<?php echo $path_fix."ui/profile.php?".rand() ?>"> </script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+>>>>>>> c0901ee29463334eace43c32c349f5917682118e
 	    </ul>
 		<?php include("modal.php"); ?>
 	    </li>

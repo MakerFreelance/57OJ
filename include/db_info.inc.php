@@ -5,7 +5,7 @@
 static 	$DB_HOST="localhost";
 static 	$DB_NAME="jol";
 static 	$DB_USER="root";
-static 	$DB_PASS="wylssg2351000";
+static 	$DB_PASS="mysql666";
 
 static 	$OJ_NAME="57OJ-信息学竞赛在线题库";
 static 	$OJ_description="57OJ现作为郑州市第五十七中学内网评测系统,基于HUSTOJ二次开发,给学生更好的交互体验,官方QQ交流群:878668254";
@@ -70,9 +70,24 @@ if( isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && strstr($_SERVER['HTTP_ACCEPT_LANG
 }
 if (isset($_SESSION[$OJ_NAME.'_'.'OJ_LANG'])) $OJ_LANG=$_SESSION[$OJ_NAME.'_'.'OJ_LANG'];
 
+<<<<<<< HEAD
 require_once(dirname(__FILE__)."/pdo.php");	
+=======
+require_once(dirname(__FILE__)."/pdo.php");
+
+		// use db
+	//pdo_query("set names utf8");	
+>>>>>>> c0901ee29463334eace43c32c349f5917682118e
 		
 	if(isset($OJ_CSRF)&&$OJ_CSRF&&$OJ_TEMPLATE=="bs3"&&basename($_SERVER['PHP_SELF'])!="problem_judge")
 		 require_once('csrf_check.php');
 
+<<<<<<< HEAD
+=======
+	//sychronize php and mysql server with timezone settings, dafault setting for China
+	//if you are not from China, comment out these two lines or modify them.
+	//date_default_timezone_set("PRC");
+	//pdo_query("SET time_zone ='+8:00'");
+
+>>>>>>> c0901ee29463334eace43c32c349f5917682118e
 ?>

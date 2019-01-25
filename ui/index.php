@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
     <meta name="description" content="">
+=======
+    <meta name="description" content="<?php echo $OJ_description ?>">
+>>>>>>> c0901ee29463334eace43c32c349f5917682118e
     <meta name="author" content="<?php echo $OJ_description ?>">
     <link rel="icon" href="/../favicon.ico">
     <title><?php echo $OJ_NAME?></title>  

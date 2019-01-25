@@ -58,11 +58,6 @@ static  $OJ_WEIBO_AKEY='1124518951';
 static  $OJ_WEIBO_ASEC='df709a1253ef8878548920718085e84b';
 static  $OJ_WEIBO_CBURL='http://192.168.0.108/JudgeOnline/login_weibo.php';
 
-/* renren config here */
-static  $OJ_RR_AUTH=false;
-static  $OJ_RR_AKEY='d066ad780742404d85d0955ac05654df';
-static  $OJ_RR_ASEC='c4d2988cf5c149fabf8098f32f9b49ed';
-static  $OJ_RR_CBURL='http://192.168.0.108/JudgeOnline/login_renren.php';
 /* qq config here */
 static  $OJ_QQ_AUTH=false;
 static  $OJ_QQ_AKEY='1124518951';
@@ -75,17 +70,9 @@ if( isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && strstr($_SERVER['HTTP_ACCEPT_LANG
 }
 if (isset($_SESSION[$OJ_NAME.'_'.'OJ_LANG'])) $OJ_LANG=$_SESSION[$OJ_NAME.'_'.'OJ_LANG'];
 
-require_once(dirname(__FILE__)."/pdo.php");
-
-		// use db
-	//pdo_query("set names utf8");	
+require_once(dirname(__FILE__)."/pdo.php");	
 		
 	if(isset($OJ_CSRF)&&$OJ_CSRF&&$OJ_TEMPLATE=="bs3"&&basename($_SERVER['PHP_SELF'])!="problem_judge")
 		 require_once('csrf_check.php');
-
-	//sychronize php and mysql server with timezone settings, dafault setting for China
-	//if you are not from China, comment out these two lines or modify them.
-	//date_default_timezone_set("PRC");
-	//pdo_query("SET time_zone ='+8:00'");
 
 ?>

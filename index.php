@@ -1,0 +1,21 @@
+<?php
+	$cache_time=30;
+	$OJ_CACHE_SHARE=true;
+	require_once('./include/cache_start.php');
+    require_once('./include/db_info.inc.php');
+    require_once('./include/memcache.php');
+	require_once('./include/setlang.php');
+	require_once('./include/57oj-function.php');
+	$view_title= "郑州市第五十七中学代码测评系统";
+    $result=false;	
+	if(isset($OJ_ON_SITE_CONTEST_ID)){
+		header("location:contest.php?cid=".$OJ_ON_SITE_CONTEST_ID);
+		exit();
+	}
+	//载入排名
+	include("view_status.php");
+	include("rk.php");
+	include("view_contest.php");
+	//导入页面
+	require("ui/index.php");
+?>

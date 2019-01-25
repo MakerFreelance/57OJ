@@ -1,0 +1,8 @@
+<h1 style="text-align:center;">
+	<strong>欢迎来到57中学信息学代码测评系统</strong> 
+</h1>
+<p style="text-align:center;">
+	<b><span style="font-size:16px;">支持提交语言：C/C++、JAVA、Pascal</span></b><b></b> 
+<br />
+<h3 class="ti<x>tle-text" style="font-size:18px;color:#333333;font-weight:400;font-family:" background-color:#ffffff;"=""> <b></b> 
+	</h3>

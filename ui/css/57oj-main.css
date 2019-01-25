@@ -111,6 +111,7 @@
 }
 .oj57-footer{
 	width: 100%;
+	min-width: 1000px;
 	height: 150px;
 	background-color:#222222;
 }

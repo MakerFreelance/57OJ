@@ -124,9 +124,9 @@
 						</div>
 					</div>
 				</div>			
-			</div>		
+			</div>
+			<!--页脚-->
+		<?php require("ui/footer.php");?>		
 		 </div>
-		 <!--页脚-->
-		<?php require("ui/footer.php");?>
     </body>
 </html>

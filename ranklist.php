@@ -2,7 +2,7 @@
         $OJ_CACHE_SHARE=false;
         $cache_time=30;
         require_once('./include/cache_start.php');
-    require_once('./include/db_info.inc.php');
+        require_once('./include/db_info.inc.php');
         require_once('./include/setlang.php');
         require_once('./include/memcache.php');
         $view_title= $MSG_RANKLIST;

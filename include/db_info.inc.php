@@ -70,24 +70,13 @@ if( isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && strstr($_SERVER['HTTP_ACCEPT_LANG
 }
 if (isset($_SESSION[$OJ_NAME.'_'.'OJ_LANG'])) $OJ_LANG=$_SESSION[$OJ_NAME.'_'.'OJ_LANG'];
 
-<<<<<<< HEAD
-require_once(dirname(__FILE__)."/pdo.php");	
-=======
+
 require_once(dirname(__FILE__)."/pdo.php");
 
 		// use db
 	//pdo_query("set names utf8");	
->>>>>>> c0901ee29463334eace43c32c349f5917682118e
 		
 	if(isset($OJ_CSRF)&&$OJ_CSRF&&$OJ_TEMPLATE=="bs3"&&basename($_SERVER['PHP_SELF'])!="problem_judge")
 		 require_once('csrf_check.php');
 
-<<<<<<< HEAD
-=======
-	//sychronize php and mysql server with timezone settings, dafault setting for China
-	//if you are not from China, comment out these two lines or modify them.
-	//date_default_timezone_set("PRC");
-	//pdo_query("SET time_zone ='+8:00'");
-
->>>>>>> c0901ee29463334eace43c32c349f5917682118e
 ?>

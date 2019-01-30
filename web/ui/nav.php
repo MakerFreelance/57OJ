@@ -20,7 +20,7 @@
 	}
 ?>
       <!-- 全局导航栏-->
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+      <nav class="navbar navbar-inverse "  role="navigation" >
         <div class="container-fluid">
           <div class="navbar-header">
             <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -54,7 +54,7 @@
 
 <?php }?>
             </ul>
-            <div class="nav navbar-nav navbar-right" style="height: 100%">
+            <div class="nav navbar-nav navbar-right">
 	    <ul class="nav navbar-nav navbar-right">
         <?php 
         if(isset($_SESSION[$OJ_NAME.'_'.'user_id'])){
@@ -73,12 +73,7 @@
             
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span id="profile">Login</span><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu"'>
-<<<<<<< HEAD
 			      <script src="<?php echo $path_fix."ui/profile.php?".rand() ?>"> </script>
-=======
-			<script src="<?php echo $path_fix."ui/profile.php?".rand() ?>"> </script>
-              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
->>>>>>> c0901ee29463334eace43c32c349f5917682118e
 	    </ul>
 		<?php include("modal.php"); ?>
 	    </li>

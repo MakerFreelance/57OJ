@@ -3,7 +3,6 @@ if(isset($_POST['keyword']))
   $cache_time = 1;
 else
   $cache_time = 30;
-
 $OJ_CACHE_SHARE = false;//!(isset($_GET['cid'])||isset($_GET['my']));
 require_once('./include/cache_start.php');
 require_once('./include/db_info.inc.php');
@@ -197,6 +196,5 @@ if(isset($_GET['cid'])){
 /////////////////////////Template
 if(isset($_GET['cid'])) require("ui/contest.php");
 else require("ui/contestset.php");
-/////////////////////////Common foot
-if(file_exists('./include/cache_end.php')) require_once('./include/cache_end.php');
+
 ?>

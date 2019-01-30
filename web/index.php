@@ -6,7 +6,6 @@
     require_once('./include/memcache.php');
 	require_once('./include/setlang.php');
 	require_once('./include/57oj-function.php');
-	$view_title= "郑州市第五十七中学代码测评系统";
     $result=false;	
 	if(isset($OJ_ON_SITE_CONTEST_ID)){
 		header("location:contest.php?cid=".$OJ_ON_SITE_CONTEST_ID);

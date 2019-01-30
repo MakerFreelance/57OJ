@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh"> 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="../../favicon.ico">
-  <title><?php echo $OJ_NAME?></title>  
-  <?php include("ui/css.php");?>     
-</head>
-
-<body class="oj57-bg">
-    <div class="oj57-frame">
-	  	<?php include("ui/nav.php");?>	  
-	  		<div class="oj57-container" style="background-color:#fff">
+<!--导入页面样式-->
+<?php include("ui/css.php");?>  
       <div class="col-xs-12 panel panel-default" style="padding-right: 0px;padding-left: 0px;padding-bottom: 0px;">
         <div class="panel-body" style="padding: 0px 0px;">
 
@@ -118,9 +103,6 @@
         </div>
   			<!--页脚-->
 				<?php require("ui/footer.php");?>
-		</div>
-  </div>
-</div> <!-- /container -->
   <script>
   function phpfm(pid){
     //alert(pid);
@@ -136,5 +118,3 @@
   });
   </script>   
 
-</body>
-</html>

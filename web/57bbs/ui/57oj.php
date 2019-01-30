@@ -1,24 +1,6 @@
-<?php 
-//   $view_discuss=ob_get_contents();
-//   ob_end_clean();
-  require_once("../lang/$OJ_LANG.php");
-?>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <title><?php echo $OJ_NAME?></title>  
-    <?php include("../ui/css.php");?>	    
-  </head>
-  <body class="oj57-bg">
-    <div class="oj57-frame">
-	  	<?php include("../ui/nav.php");?>
-            <div class="oj57-container" style="background-color:#fff">
+<!--导入页面样式-->
+<?php include("../ui/css.php");?>  
+            <div style="background-color:#fff">
                 <?php
                 if ($prob_exist){?>
                         <div class="tr-head">
@@ -117,7 +99,5 @@
 
                 </table>
             </div>
-        <!--页脚-->
-		<?php require("../ui/footer.php");?>
-	</div>
-</body>
+<!--页脚-->
+<?php require("../ui/footer.php");?>

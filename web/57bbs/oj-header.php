@@ -9,4 +9,3 @@
 	}
    ob_start();
 ?>
-<?php include("../ui/css.php");?>

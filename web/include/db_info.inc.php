@@ -1,18 +1,25 @@
 ﻿<?php @session_start();
-	ini_set("display_errors","Off");
-	//ini_set("session.cookie_httponly", 1);   
-	//header('X-Frame-Options:SAMEORIGIN');
+ini_set("display_errors","Off");
+// 数据库配置信息
 static 	$DB_HOST="localhost";
 static 	$DB_NAME="jol";
 static 	$DB_USER="root";
 static 	$DB_PASS="mysql666";
-
+// 首页信息配置
+static  $NOTICE="<p>本系统以在线编写(在线IDE)的形式上传源代码,现作为郑州市第五十七中学内网题库，测评环境为Linux,无法调用WindowsAPI以及其他SDK，推荐根据个人习惯选择合适的编辑器或IDE测试代码无误再复制提交，推荐：Dev-C++、MinGWStudio、VS Code。如有问题请加QQ交流群:<a target='_blank' href='//shang.qq.com/wpa/qunwpa?idkey=49f8cbfbc51ff7745d236f76cb9c1aadf308d43fb3461becf5986a2a92d4dcad'>878668254</a>进行反馈。</p>";
+static  $NOTICE_1_image="1.jpg";
+static  $NOTICE_2_image="2.jpg";
+static  $NOTICE_3_image="3.jpg";
 static 	$OJ_NAME="57OJ-信息学竞赛在线题库";
-static 	$OJ_description="57OJ现作为郑州市第五十七中学内网评测系统,基于HUSTOJ二次开发,给学生更好的交互体验,官方QQ交流群:878668254";
+static  $view_title="郑州市第五十七中学代码测评系统";
+//搜索引擎相关配置
+static  $OJ_keywords="57OJ,OJ,信息学竞赛,NOIP,ACM,NOI,OI,五十七中,郑州市第五十七中学";	//搜索引擎关键字
+static 	$OJ_description="57OJ现作为郑州市第五十七中学内网评测系统,57OJ使用HUSTOJ的判题内核强力驱动,给学生更好的交互体验,官方QQ交流群:878668254";		//搜索引擎描述
+// 57OJ高级设置
 static 	$OJ_HOME="./";
 static 	$OJ_ADMIN="root@localhost";
 static 	$OJ_DATA="/home/www/data";
-static 	$OJ_BBS="57bbs";//"bbs" for phpBB3 bridge or "discuss" for mini-forum
+static 	$OJ_BBS="57bbs";
 static  $OJ_ONLINE=false;
 static  $OJ_LANG="cn";
 static  $OJ_SIM=false; 
@@ -51,18 +58,6 @@ static  $OJ_ENCODE_SUBMIT=false; //是否启用base64编码提交的功能，用
 //static  $OJ_ON_SITE_CONTEST_ID=1000; //启用现场赛状态，填写现场赛比赛ID
 
 static $OJ_OPENID_PWD = '8a367fe87b1e406ea8e94d7d508dcf01';
-
-/* weibo config here */
-static  $OJ_WEIBO_AUTH=false;
-static  $OJ_WEIBO_AKEY='1124518951';
-static  $OJ_WEIBO_ASEC='df709a1253ef8878548920718085e84b';
-static  $OJ_WEIBO_CBURL='http://192.168.0.108/JudgeOnline/login_weibo.php';
-
-/* qq config here */
-static  $OJ_QQ_AUTH=false;
-static  $OJ_QQ_AKEY='1124518951';
-static  $OJ_QQ_ASEC='df709a1253ef8878548920718085e84b';
-static  $OJ_QQ_CBURL='192.168.0.108';
 
 if( isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && strstr($_SERVER['HTTP_ACCEPT_LANGUAGE'],"zh-CN")) {
         $OJ_LANG="cn";

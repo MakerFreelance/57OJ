@@ -1,4 +1,4 @@
- <?php
+<?php
 if(isset($_POST['keyword']))
   $cache_time = 1;
 else
@@ -21,25 +21,25 @@ function formatTimeLength($length)
 
   if($length >= 60){
     $second = $length%60;
-    if($second > 0){ $result = $second.'秒';}
+    if($second > 0){ $result = $second.'��?';}
     $length = floor($length/60);
     if($length >= 60){
       $minute = $length%60;
-      if($minute == 0){ if($result != ''){ $result = '0分' . $result;}}
-      else{ $result = $minute.'分'.$result;}
+      if($minute == 0){ if($result != ''){ $result = '0��?' . $result;}}
+      else{ $result = $minute.'��?'.$result;}
       $length = floor($length/60);
       if($length >= 24){
       	$hour = $length%24;
         if($hour == 0){ if($result != ''){ $result = '0小时' . $result;}}
         else{ $result = $hour . '小时' . $result;}
         $length = floor($length / 24);
-        $result = $length . '天' . $result;
+        $result = $length . '��?' . $result;
       }
       else{ $result = $length . '小时' . $result;}
     }
-    else{ $result = $length . '分' . $result;}
+    else{ $result = $length . '��?' . $result;}
   }
-  else{ $result = $length . '秒';
+  else{ $result = $length . '��?';
   }
   return $result;
 }
@@ -47,9 +47,6 @@ function formatTimeLength($length)
 if(isset($_GET['cid'])){
   $cid = intval($_GET['cid']);
   $view_cid = $cid;
-  //print $cid;
-
-  //check contest valid
   $sql = "SELECT * FROM `contest` WHERE `contest_id`=?";
   $result = pdo_query($sql,$cid);
 
@@ -124,8 +121,6 @@ if(isset($_GET['cid'])){
   $keyword = "";
 
   if(isset($_POST['keyword'])){ $keyword="%".$_POST['keyword']."%";}
-  //echo "$keyword";
-
   $mycontests = "";
   $len = mb_strlen($OJ_NAME.'_');
 
@@ -168,12 +163,8 @@ if(isset($_GET['cid'])){
                                 
     $length = $end_time-$start_time;
     $left = $end_time-$now;
-	//past
-
     if($now>$end_time){
       $view_contest[$i][2] = "<span class=green>$MSG_Ended@".$row['end_time']."</span>";
-      //pending
-
     }else if ($now<$start_time){
   	  $view_contest[$i][2] = "<span class=blue>$MSG_Start@".$row['start_time']."</span>&nbsp;";
       $view_contest[$i][2] .= "<span class=green>$MSG_TotalTime".formatTimeLength($length)."</span>";
@@ -182,19 +173,13 @@ if(isset($_GET['cid'])){
   	  $view_contest[$i][2] = "<span class=red> $MSG_Running</font>&nbsp;";
       $view_contest[$i][2] .= "<span class=green> $MSG_LeftTime ".formatTimeLength($left)." </span>";
     }
-
     $private = intval($row['private']);
     if($private==0) $view_contest[$i][3] = "<span class=blue>$MSG_Public</span>";
     else $view_contest[$i][3] = "<span class=red>$MSG_Private</span>";
-
     $view_contest[$i][4]=$row['user_id'];
-
     $i++;
   }
 }
-
-/////////////////////////Template
 if(isset($_GET['cid'])) require("ui/contest.php");
 else require("ui/contestset.php");
-
 ?>

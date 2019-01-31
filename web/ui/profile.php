@@ -3,7 +3,7 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Cache-Control: no-cache");
 header("Pragma: no-cache");
 header("content-type:application/javascript");
-include("modal.php");
+// include("modal.php");
 if(isset($_SERVER['HTTP_REFERER'])) $dir=basename(dirname($_SERVER['HTTP_REFERER']));
 else $dir="";
 

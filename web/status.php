@@ -295,7 +295,7 @@ for ($i=0;$i<$rows_cnt;$i++){
 
         }
         if(isset($_SESSION[$OJ_NAME.'_'.'http_judge'])) {
-		 $view_status[$i][3].="<form class='http_judge_form form-inline' >
+		 $view_status[$i][3].="<form class='http_judge_form form-inline'>
 					<input type=hidden name=sid value='".$row['solution_id']."'>";
                  $view_status[$i][3].="</form>";
 	}

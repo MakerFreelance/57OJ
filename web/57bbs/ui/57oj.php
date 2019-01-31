@@ -1,6 +1,6 @@
 <!--导入页面样式-->
 <?php include("../ui/css.php");?>  
-            <div style="background-color:#fff">
+    <div class="bg">
                 <?php
                 if ($prob_exist){?>
                         <div class="tr-head">
@@ -24,11 +24,9 @@
                             ">请先登录</a> 
                         <?php }?>
                         </div>
-
-                        <div style="float:left;text-align:left;font-size:80%">
-                        位置 :
-                        <?php if ($cid!=null) echo "<a href=\"57bbs.php?cid=".$cid."\">Contest ".$cid."</a>"; else echo "<a href=\"57bbs.php\">交流</a>";
-                        if ($pid!=null && $pid!=0){
+                    <div style="float:left;text-align:left;font-size:80%">位置 :
+                    <?php if ($cid!=null) echo "<a href=\"57bbs.php?cid=".$cid."\">Contest ".$cid."</a>"; else echo "<a href=\"57bbs.php\">交流</a>";
+                if ($pid!=null && $pid!=0){
                                 $query="?pid=$pid";
                                 if($cid!=0) {
                                     $query.="&cid=$cid";
@@ -40,15 +38,12 @@
                         }
                         ?>
                         </div>
-                        <div style="float:right;font-size:80%;color:red;font-weight:bold">
-                        <?php if ($pid!=null && $pid!=0 && ($cid=='' || $cid==null)){?>
+                    <div style="float:right;font-size:80%;color:red;font-weight:bold">
+                    <?php if ($pid!=null && $pid!=0 && ($cid=='' || $cid==null)){?>
                         <a href="../problem.php?id=<?php echo $pid?>">See the problem</a>
-                        <?php }?>
-                        </div>
-                        <?php 
-                }
-
-                ?>
+                    <?php }?>
+                 </div>
+                <?php } ?>
                 <table class = "table table-striped table-hover" style="clear:both; width:100%;">
                     <tr align=center class='toprow'>
                             <td width="30%">标题</td>
@@ -83,7 +78,6 @@
                         if ($row['top_level']!=0){
                             if ($row['top_level']!=1||$row['pid']==($pid==''?0:$pid)) echo"<b class=\"Top{$row['top_level']}\">Top</b>";
                         }
-                                    else if ($row['status']==1) echo"<b class=\"Lock\">Lock</b>";
                                     else if ($row['count']>20) echo"<b class=\"Hot\">Hot</b>";
                             
                             echo "<td>{$row['posttime']}</td>";

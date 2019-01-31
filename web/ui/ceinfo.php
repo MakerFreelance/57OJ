@@ -1,36 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <title><?php echo $OJ_NAME?></title>  
-    <?php include("ui/css.php");?>	    
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<!--导入页面样式-->
+<?php require("ui/css.php");?>  
+<div class="bg">
 <link href='highlight/styles/shCore.css' rel='stylesheet' type='text/css'/>
 <link href='highlight/styles/shThemeDefault.css' rel='stylesheet' type='text/css'/>
-  </head>
-
-  <body background="bg.gif">
-
-    <div class="container">
-    <?php include("ui/nav.php");?>	
-	<br/>
-		<br/>
-		<br/> 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="row">
-			<div class="col-xs-12 col-md-11 col-center-block">
-				<div class="col-xs-12 col-md-11 col-center-block well">
  <div class="brush:c" id='source' name="source"></div>
 <pre class="brush:c;" id='errtxt' ><?php echo $view_reinfo?></pre>
 <div id='errexp'>Explain:</div>
@@ -179,14 +151,6 @@ document.getElementById("errexp").innerHTML=expmsg;
 </script>
 
       </div>
-</div></div>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <?php include("ui/js.php");?>	    
 <script src='highlight/scripts/shCore.js' type='text/javascript'></script>
 <script src='highlight/scripts/shBrushCpp.js' type='text/javascript'></script>
 <script src='highlight/scripts/shBrushCss.js' type='text/javascript'></script>
@@ -215,5 +179,5 @@ $(document).ready(function(){
 
 });
 </script>
-  </body>
-</html>
+<!--页脚-->
+<?php require("ui/footer.php");?>	

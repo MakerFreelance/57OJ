@@ -1,6 +1,6 @@
 <!--导入页面样式-->
 <?php include("ui/css.php");?>  
-  <div style="background-color:#fff">
+	<div class="bg">
 				<form class="form-inline" action="ranklist.php">
 					<?php echo $MSG_USER?><input class="form-control" name="prefix" value="<?php echo htmlentities(isset($_GET['prefix'])?$_GET['prefix']:"",ENT_QUOTES,"utf-8") ?>" >
 					<input type=submit class="form-control" value="查找" >

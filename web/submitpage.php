@@ -103,11 +103,16 @@ if(!$view_src){
 //		$OJ_TEST_RUN=false;
 //		echo "$row[0]";
 	}
-	
+	$user_id = $_SESSION[$OJ_NAME.'_'.'user_id'];
+	if (isset($_GET['id'])){
+		$get_id = true;
+		//$sql ="select * from `solution` WHERE `problem_id`=? AND `user_id`=?";
+		//$status = mysql_query_cache($sql,$id,$_SESSION[$OJ_NAME.'_'.'user_id']);
+		$sql ="select * from solution WHERE problem_id=".$id." and user_id='".$user_id."' ORDER BY solution_id DESC limit 0,6";
+		$status = mysql_query_cache($sql);
+	}
 
-
-/////////////////////////Template
 require("ui/submitpage.php");
-/////////////////////////Common foot
+
 ?>
 

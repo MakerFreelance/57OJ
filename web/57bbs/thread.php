@@ -3,10 +3,8 @@
 	include("../ui/css.php");
 	include_once("kindeditor.php") ;
 	$tid=intval($_REQUEST['tid']);
-        if(isset($_GET['cid']))$cid=intval($_GET['cid']);	
+	if(isset($_GET['cid']))$cid=intval($_GET['cid']);	
 	$sql="SELECT t.`title`, `cid`, `pid`, `status`, `top_level` FROM `topic` t left join contest_problem cp on cp.problem_id=t.pid   WHERE `tid` = ? AND `status` <= 1";
-//	echo $sql;
-	//exit();
 	$result=pdo_query($sql,$tid) ;
 	$rows_cnt = count($result) ;
 	$row= $result[0];
@@ -33,7 +31,7 @@ function rep(rid){
 
 <a href="57bbs.php<?php if ($row['pid']!=0 && $row['cid']!=null) echo "?pid=".$row['pid']."&cid=".$row['cid'];
 	else if ($row['pid']!=0) echo"?pid=".$row['pid']; else if ($row['cid']!=null) echo"?cid=".$row['cid'];?>" class='text-muted' style='padding-left: 10px;font-weight:500;font-size:28px;margin: 5px 0px;'>
-	<?php if ($row['pid']!=0) echo "问题ID $pid"; else echo "MainBoard";?></a>： <span class='text-muted' style='font-weight:500;font-size:28px;margin: 5px 0px;'><?php echo nl2br(htmlentities($row['title'],ENT_QUOTES,"UTF-8"));?></span><?php if ($isadmin){
+	<?php if ($row['pid']!=0) echo "问题ID $pid"; else echo "57BBS";?></a>： <span class='text-muted' style='font-weight:500;font-size:28px;margin: 5px 0px;'><?php echo nl2br(htmlentities($row['title'],ENT_QUOTES,"UTF-8"));?></span><?php if ($isadmin){
 	?><span class="pull-right"> <?php $adminurl = "threadadmin.php?target=thread&tid={$tid}&action="; echo (" [ <a href=\"{$adminurl}delete\">删除</a> ]");
 	?></span><?php }
 ?></div></div>
@@ -71,7 +69,8 @@ $i=0;
 							    	echo "../user/df.jpg";
 							    }
 							?>" class="img-thumbnail col-center-block" style="width: 100px;height: 100px;margin-top: 15px;margin-bottom: 15px">
-			</div>
+				<a style="font-size:20px;margin-left:5px" href="../userinfo.php?user=<?php echo $row['author_id']; ?>">查看他的主页</a>	
+		</div>
 		</div>
      </div>
      	<div class="pull-right panel panel-defaul" style="width: 854px;">
@@ -125,7 +124,7 @@ $i++;
 </table>
 <script charset="utf-8" src="../kindeditor/kindeditor.js"></script>
 <script charset="utf-8" src="../kindeditor/lang/zh-CN.js"></script>
-<div style="font-size:90%; width:100%; text-align:center">[<a href="#">Top</a>]  [<a href="#">Previous Page</a>]  [<a href="#">Next Page</a>] </div>
+<div style="font-size:90%; width:100%; text-align:center">[<a href="#">Top</a>]  [<a href="#">上一頁</a>]  [<a href="#">下一頁</a>] </div>
 <?php if (isset($_SESSION[$OJ_NAME.'_'.'user_id'])){?>
 	<div class="pull-right panel panel-defaul" style="width: 854px;">
           <div class="panel-body" style="padding-top: 0px;">
@@ -141,8 +140,5 @@ $i++;
 <?php }
 ?>
 
-
-<div class='col-xs-12 col-md-12' style='color:#fff;font-size:15px;text-align:center' >@2018-<span id='utime'>9999</span> - 郑州市第五十七中学代码评测系统</div>
-			<div class='col-xs-12 col-md-12' style='color:#fff;font-size:15px;text-align:center'>由<a href='mailto:wyl2365345833@outlook.com'>Maker-freelance</a>二次开发 原作者：zhblue</div>
 </div>
 <?php require_once("../ui/57bbs.php")?>

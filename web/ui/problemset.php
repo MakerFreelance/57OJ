@@ -1,6 +1,6 @@
 <!--导入页面样式-->
 <?php include("ui/css.php");?>  
-	  		<div style="background-color:#fff">
+  <div class="bg">
               <table>
                 <tr align='center' class='evenrow'><td width='5'></td>
                 <td  colspan='1'>

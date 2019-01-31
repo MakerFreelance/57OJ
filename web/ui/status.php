@@ -1,6 +1,6 @@
 <!--导入页面样式-->
 <?php include("ui/css.php");?>  
-<div style="background-color:#fff">
+<div class="bg">
 <div align=center class="input-append">
 <?php
 ?>
@@ -60,16 +60,6 @@ echo "SIM:
 <option value=90 ".($showsim==90?'selected':'').">90</option>
 <option value=100 ".($showsim==100?'selected':'').">100</option>
 </select>";
-/* if (isset($_GET['cid']))
-echo "<input type=hidden name=cid value='".$_GET['cid']."'>";
-if (isset($_GET['language']))
-echo "<input type=hidden name=language value='".$_GET['language']."'>";
-if (isset($_GET['user_id']))
-echo "<input type=hidden name=user_id value='".$_GET['user_id']."'>";
-if (isset($_GET['problem_id']))
-echo "<input type=hidden name=problem_id value='".$_GET['problem_id']."'>";
-//echo "<input type=submit>";
-*/
 }
 echo "<input type=submit class='form-control' value='$MSG_SEARCH'></form>";
 ?>
@@ -94,22 +84,20 @@ echo "<input type=submit class='form-control' value='$MSG_SEARCH'></form>";
 <?php
 $cnt=0;
 foreach($view_status as $row){
-if ($cnt)
-echo "<tr class='oddrow'>";
-else
-echo "<tr class='evenrow'>";
-$i=0;
-foreach($row as $table_cell){
-	if($i>3&&$i!=8)
-		echo "<td class='hidden-xs'>";
-	else
-		echo "<td>";
-	echo $table_cell;
-	echo "</td>";
-	$i++;
-}
-echo "</tr>\n";
-$cnt=1-$cnt;
+	if ($cnt) echo "<tr class='oddrow'>";
+	else echo "<tr class='evenrow'>";
+	$i=0;
+	foreach($row as $table_cell){
+		if($i>3&&$i!=8)
+			echo "<td class='hidden-xs'>";
+		else
+			echo "<td>";
+		echo $table_cell;
+		echo "</td>";
+		$i++;
+	}
+	echo "</tr>\n";
+	$cnt=1-$cnt;
 }
 ?>
 </tbody>
@@ -127,7 +115,6 @@ echo "[<a href=status.php?".$str2."&top=".$bottom."&prevtop=$top>Next Page</a>]"
 		</div>
       </div>
 	  </div>
-	  script src="<?php echo $path_fix.""?>bg.js"></script>  	    
 	<script>var i=0;
 		var judge_result=[<?php
 		foreach($judge_result as $result){

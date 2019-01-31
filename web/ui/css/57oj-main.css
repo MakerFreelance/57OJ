@@ -3,26 +3,52 @@
 	background-attachment: fixed;
 	background-size:cover;
 }
-.oj57-frame{
+.col-center-block {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav-header{
 	width: 100%;
 }
+.oj57-frame{
+	width: 100%;
+	min-width: 654px;
+}
 .oj57-container {
-	border-radius:10px;
+	width: 100%;
+	max-width: 1000px;
+	background-color:rgba(255,255,255,0);
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 20px;
+}
+.oj57-container-info {
 	width: 1000px;
 	background-color:rgba(255,255,255,0);
 	margin-left:auto;
 	margin-right:auto;
-	margin-top: 45px;
+	margin-top: 20px;
+}
+.oj57-container .bg{
+	border-radius: 10px;
+	width: 100%;
+	background-color:#fff;
+	padding: 10px;
+}
+.oj57-container .container{
+	border-radius:8px;
 }
 .oj57-container .header{
 	width: 100%;
 }
 .oj57-container .header .left{
-	width: 600px;
+	width: 60%;
 	height: 310px;
 }
 .oj57-container .header .right{
-	width: 360px;
+	width: 38%;
 }
 .oj57-container .interaction{
 	margin-top: 15px;
@@ -31,18 +57,20 @@
 }
 .oj57-container .interaction .notice{
 	float: right;
-	width: 620px;
+	width: 62%;
 	height: 160PX;
 }
-.oj57-container .interaction .notice h3{
-	margin-left: 220px;
+.oj57-container .interaction .notice .notice-h3{
+	width:120px;
+	margin-left:auto;
+	margin-right:auto;
 }
 .oj57-container .interaction .notice .text-container{
 	font-size:16px;
 }
 .oj57-container .interaction .search{
 	float: left;
-	width: 365px;
+	width: 36%;
 	height: 160PX;
 }
 .oj57-container .interaction .search .name{
@@ -50,7 +78,7 @@
 	height: 60px;
 }
 .oj57-container .interaction .search .name input{
-	width: 260px;
+	width: 70%;
 	float: left;
 }
 .oj57-container .interaction .search .name button{
@@ -61,7 +89,7 @@
 	height: 50px;
 }
 .oj57-container .interaction .search .id input{
-	width: 260px;
+	width: 70%;
 	float: left;
 }
 .oj57-container .interaction .search .id button{
@@ -78,7 +106,7 @@
 	font-size: 18px;
 }
 .oj57-container .interaction-two .contest{
-	width: 800px;
+	width: 100%;
 }
 .oj57-container .interaction-two .contest .panel-adjustment{
 	padding-bottom: 0px;
@@ -104,19 +132,20 @@
 	font-weight: 500;
 }
 .oj57-container .tr-head{
-	width: 900px;
+	width: 90%;
 	margin-left:auto;
 	margin-right:auto;
 	padding-top: 10px;
 }
 .oj57-footer{
 	width: 100%;
-	min-width: 1000px;
 	height: 150px;
 	background-color:#222222;
+	margin-top: 20px;
 }
 .oj57-footer .container{
-	width: 1000px;
+	width: 100%;
+	max-width: 1000px;
 	height: 150px;
 }
 .oj57-footer .container-left{
@@ -129,4 +158,51 @@
 	height: 120px;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+.submit-head{
+	width: 100%;
+	height: 150px;
+}
+.submit-left{
+	padding: 10px;
+	float: left;
+	width: 30%;
+	height: 150px;
+	border-radius: 8px;
+	box-shadow:0px 0px 3px #909090;
+	background-color: #fff;
+}
+.submit-left .main{
+	height: 90px;
+}
+.submit-left .main .left{
+	width:30%;
+	height: 90px;
+	float: left;
+}
+.submit-left .main .right{
+	width:70%;
+	height: 90px;
+	float: right;
+}
+.submit-right{
+	padding: 10px;
+	float: right;
+	width: 69%;
+	height: 150px;
+	border-radius: 8px;
+	box-shadow:0px 0px 3px #909090;
+	background-color: #fff;
+}
+.submit-right-head{
+	width: 100%;
+	height: 30px;
+	border-bottom:1px solid rgb(139, 138, 138)
+}
+.submit-main{
+	width: 100%;
+	height: 600px;
+	margin-top: 10px;
+	border-radius: 8px;
+	background-color: #fff;
 }

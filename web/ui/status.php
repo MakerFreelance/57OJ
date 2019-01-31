@@ -1,35 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title><?php echo $OJ_NAME?></title>  
-    <?php include("ui/css.php");?>	    
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
- <body>
-
-    <div class="container" style='width: 100%;position:absolute;'>
-    <?php include("ui/nav.php");?>	
-<br/>
-		<br/>
-		<br/> 
-      <!-- Main component for a primary marketing message or call to action -->
-			<div class="col-xs-12 col-md-11 col-center-block">
-				<div class="col-xs-12 col-md-11 col-center-block panel panel-info">
-					<div class="panel panel-body">
+<!--导入页面样式-->
+<?php include("ui/css.php");?>  
+<div class="bg">
 <div align=center class="input-append">
 <?php
 ?>
@@ -89,16 +60,6 @@ echo "SIM:
 <option value=90 ".($showsim==90?'selected':'').">90</option>
 <option value=100 ".($showsim==100?'selected':'').">100</option>
 </select>";
-/* if (isset($_GET['cid']))
-echo "<input type=hidden name=cid value='".$_GET['cid']."'>";
-if (isset($_GET['language']))
-echo "<input type=hidden name=language value='".$_GET['language']."'>";
-if (isset($_GET['user_id']))
-echo "<input type=hidden name=user_id value='".$_GET['user_id']."'>";
-if (isset($_GET['problem_id']))
-echo "<input type=hidden name=problem_id value='".$_GET['problem_id']."'>";
-//echo "<input type=submit>";
-*/
 }
 echo "<input type=submit class='form-control' value='$MSG_SEARCH'></form>";
 ?>
@@ -123,22 +84,20 @@ echo "<input type=submit class='form-control' value='$MSG_SEARCH'></form>";
 <?php
 $cnt=0;
 foreach($view_status as $row){
-if ($cnt)
-echo "<tr class='oddrow'>";
-else
-echo "<tr class='evenrow'>";
-$i=0;
-foreach($row as $table_cell){
-	if($i>3&&$i!=8)
-		echo "<td class='hidden-xs'>";
-	else
-		echo "<td>";
-	echo $table_cell;
-	echo "</td>";
-	$i++;
-}
-echo "</tr>\n";
-$cnt=1-$cnt;
+	if ($cnt) echo "<tr class='oddrow'>";
+	else echo "<tr class='evenrow'>";
+	$i=0;
+	foreach($row as $table_cell){
+		if($i>3&&$i!=8)
+			echo "<td class='hidden-xs'>";
+		else
+			echo "<td>";
+		echo $table_cell;
+		echo "</td>";
+		$i++;
+	}
+	echo "</tr>\n";
+	$cnt=1-$cnt;
 }
 ?>
 </tbody>
@@ -155,14 +114,7 @@ echo "[<a href=status.php?".$str2."&top=".$bottom."&prevtop=$top>Next Page</a>]"
 </div>
 		</div>
       </div>
-	  <div class='col-xs-12 col-md-12' style='color:#fff;font-size:15px;text-align:center' >@2018-<span id='utime'>9999</span> - 郑州市第五十七中学代码评测系统</div>
-	<div class='col-xs-12 col-md-12' style='color:#fff;font-size:15px;text-align:center'>由<a href='mailto:wyl2365345833@outlook.com'>Maker-freelance</a>二次开发 原作者：zhblue</div>
-	</div>
-    </div> <!-- /container -->
-
-
-    <canvas id="canvas" style="position:absolute;z-index:-1;position: fixed;width:100%;height:100%"></canvas>
-	<script src="<?php echo $path_fix.""?>bg.js"></script>  	    
+	  </div>
 	<script>var i=0;
 		var judge_result=[<?php
 		foreach($judge_result as $result){
@@ -177,5 +129,5 @@ echo "[<a href=status.php?".$str2."&top=".$bottom."&prevtop=$top>Next Page</a>]"
 		?>''];
 	</script>
 	<script src="ui/auto_refresh.js?v=0.34" ></script>
-  </body>
-</html>
+	<!--页脚-->
+<?php require("ui/footer.php");?>	

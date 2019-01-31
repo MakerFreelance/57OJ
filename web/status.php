@@ -3,24 +3,22 @@ header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 
 ////////////////////////////Common head
-	$cache_time=2;
-	$OJ_CACHE_SHARE=false;
-	require_once('./include/cache_start.php');
-    require_once('./include/db_info.inc.php');
-    require_once('./include/memcache.php');
-	require_once('./include/setlang.php');
-	$view_title= "$MSG_STATUS";
-	
-
-        
+$cache_time=2;
+$OJ_CACHE_SHARE=false;
+require_once('./include/cache_start.php');
+require_once('./include/db_info.inc.php');
+require_once('./include/memcache.php');
+require_once('./include/setlang.php');
+$view_title= "$MSG_STATUS";
+   
 require_once("./include/my_func.inc.php");
 if(isset($OJ_LANG)){
-                require_once("./lang/$OJ_LANG.php");
-        }
+        require_once("./lang/$OJ_LANG.php");
+}
 require_once("./include/const.inc.php");
 
 if($OJ_TEMPLATE!="classic") 
-	$judge_color=Array("btn gray","btn btn-info","btn btn-warning","btn btn-warning","btn btn-success","btn btn-danger","btn btn-danger","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-info");
+$judge_color=Array("btn gray","btn btn-info","btn btn-warning","btn btn-warning","btn btn-success","btn btn-danger","btn btn-danger","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-warning","btn btn-info");
 
 $str2="";
 $lock=false;
@@ -297,7 +295,7 @@ for ($i=0;$i<$rows_cnt;$i++){
 
         }
         if(isset($_SESSION[$OJ_NAME.'_'.'http_judge'])) {
-		 $view_status[$i][3].="<form class='http_judge_form form-inline' >
+		 $view_status[$i][3].="<form class='http_judge_form form-inline'>
 					<input type=hidden name=sid value='".$row['solution_id']."'>";
                  $view_status[$i][3].="</form>";
 	}

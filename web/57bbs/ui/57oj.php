@@ -1,24 +1,6 @@
-<?php 
-//   $view_discuss=ob_get_contents();
-//   ob_end_clean();
-  require_once("../lang/$OJ_LANG.php");
-?>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <title><?php echo $OJ_NAME?></title>  
-    <?php include("../ui/css.php");?>	    
-  </head>
-  <body class="oj57-bg">
-    <div class="oj57-frame">
-	  	<?php include("../ui/nav.php");?>
-            <div class="oj57-container" style="background-color:#fff">
+<!--导入页面样式-->
+<?php include("../ui/css.php");?>  
+    <div class="bg">
                 <?php
                 if ($prob_exist){?>
                         <div class="tr-head">
@@ -42,11 +24,9 @@
                             ">请先登录</a> 
                         <?php }?>
                         </div>
-
-                        <div style="float:left;text-align:left;font-size:80%">
-                        位置 :
-                        <?php if ($cid!=null) echo "<a href=\"57bbs.php?cid=".$cid."\">Contest ".$cid."</a>"; else echo "<a href=\"57bbs.php\">交流</a>";
-                        if ($pid!=null && $pid!=0){
+                    <div style="float:left;text-align:left;font-size:80%">位置 :
+                    <?php if ($cid!=null) echo "<a href=\"57bbs.php?cid=".$cid."\">Contest ".$cid."</a>"; else echo "<a href=\"57bbs.php\">交流</a>";
+                if ($pid!=null && $pid!=0){
                                 $query="?pid=$pid";
                                 if($cid!=0) {
                                     $query.="&cid=$cid";
@@ -58,15 +38,12 @@
                         }
                         ?>
                         </div>
-                        <div style="float:right;font-size:80%;color:red;font-weight:bold">
-                        <?php if ($pid!=null && $pid!=0 && ($cid=='' || $cid==null)){?>
+                    <div style="float:right;font-size:80%;color:red;font-weight:bold">
+                    <?php if ($pid!=null && $pid!=0 && ($cid=='' || $cid==null)){?>
                         <a href="../problem.php?id=<?php echo $pid?>">See the problem</a>
-                        <?php }?>
-                        </div>
-                        <?php 
-                }
-
-                ?>
+                    <?php }?>
+                 </div>
+                <?php } ?>
                 <table class = "table table-striped table-hover" style="clear:both; width:100%;">
                     <tr align=center class='toprow'>
                             <td width="30%">标题</td>
@@ -101,7 +78,6 @@
                         if ($row['top_level']!=0){
                             if ($row['top_level']!=1||$row['pid']==($pid==''?0:$pid)) echo"<b class=\"Top{$row['top_level']}\">Top</b>";
                         }
-                                    else if ($row['status']==1) echo"<b class=\"Lock\">Lock</b>";
                                     else if ($row['count']>20) echo"<b class=\"Hot\">Hot</b>";
                             
                             echo "<td>{$row['posttime']}</td>";
@@ -117,7 +93,5 @@
 
                 </table>
             </div>
-        <!--页脚-->
-		<?php require("../ui/footer.php");?>
-	</div>
-</body>
+<!--页脚-->
+<?php require("../ui/footer.php");?>

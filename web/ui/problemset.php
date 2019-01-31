@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <title><?php echo $OJ_NAME?></title>  
-    <?php include("ui/css.php");?>	    
-  </head>
-  <body class="oj57-bg">
-    <div class="oj57-frame">
-	  	<?php include("ui/nav.php");?>	  
-	  		<div class="oj57-container" style="background-color:#fff">
+<!--导入页面样式-->
+<?php include("ui/css.php");?>  
+  <div class="bg">
               <table>
                 <tr align='center' class='evenrow'><td width='5'></td>
                 <td  colspan='1'>
@@ -75,15 +62,7 @@
                   <li class="page-item"><a href="problemset.php?page=<?php echo $view_total_page?>">&gt;&gt;</a></li>
                 </ul>
               </nav>
-				<!--页脚-->
-				<?php require("ui/footer.php");?>
     </div>
-  </div> <!-- /container -->
-
-
-    <!-- <canvas id="canvas" style="position:absolute;z-index:-1;position: fixed;width:100%;height:100%"></canvas> -->
-	<!-- <script src="<?php echo $path_fix.""?>bg.js"></script>      -->
-  <script type="text/javascript" src="include/jquery.tablesorter.js"></script>
-
-</body>
-</html>
+    <script type="text/javascript" src="include/jquery.tablesorter.js"></script>
+    <!--页脚-->
+    <?php require("ui/footer.php");?>

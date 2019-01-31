@@ -3,7 +3,7 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Cache-Control: no-cache");
 header("Pragma: no-cache");
 header("content-type:application/javascript");
-include("modal.php");
+// include("modal.php");
 if(isset($_SERVER['HTTP_REFERER'])) $dir=basename(dirname($_SERVER['HTTP_REFERER']));
 else $dir="";
 
@@ -54,15 +54,6 @@ if(isset($_SESSION[$OJ_NAME.'_'.'user_id'])){
   $profile.= "&nbsp;<li><a href=".$path_fix."logout.php>$MSG_LOGOUT</a></li>&nbsp;";
 
 }else{
-  if($OJ_WEIBO_AUTH){
-    $profile.= "<li><a href=".$path_fix."login_weibo.php>$MSG_LOGIN(WEIBO)</a></li>&nbsp;";
-  }
-  if($OJ_RR_AUTH){
-    $profile.= "<li><a href=".$path_fix."login_renren.php>$MSG_LOGIN(RENREN)</a></li>&nbsp;";
-  }
-  if ($OJ_QQ_AUTH){
-    $profile.= "<li><a href=".$path_fix."login_qq.php>$MSG_LOGIN(QQ)</a></li>&nbsp;";
-  }
 	$profile.= "<li role='presentation'>";
 	$profile.= "<a data-toggle='modal' data-target='#login_modal'>登录</a></li>";
 	$profile.= "<li role='presentation'>";

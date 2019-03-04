@@ -2,7 +2,7 @@
 <div class="col-xs-12 col-md-12 oj57-footer">
     <div class="container">
         <div class="col-xs-9 col-md-9 pull-left container-left">
-            <div style='color:#fff;font-size:15px;text-align:center' >@2018-<span id='utime'>9999</span> - 郑州市第五十七中学代码评测系统，作者:<a href='https://www.maker-freelance.com/'>Maker_Freelance</a>，57OJ使用HUSTOJ的判题内核强力驱动，遵循GPLv2协议<a href='https://github.com/MakerFreelance/57OJ'>Github</a>。服务器时间:<span id=nowdate></span></div>
+            <div style='color:#fff;font-size:15px;text-align:center' >@2018-<span id='utime'>9999</span> - 郑州市第五十七中学代码评测系统，作者:<a href='https://Yaolou.Wang/'>Yaolou</a>，57OJ使用HUSTOJ的判题内核强力驱动，遵循GPLv2协议<a href='https://github.com/Yaolou/57OJ'>Github</a>。服务器时间:<span id=nowdate></span></div>
             <h4 style='color:#fff;'>管理团队:</h4>
             <div style='color:#fff;font-size:15px'>郑州市第五十七中学信息组：cc6666、</div>
         </div>
@@ -10,7 +10,7 @@
             <h4 style='color:#fff;'>友情链接:</h4>
             <ul>
                 <li><a href="http://www.zz57z.com">郑州市第五十七中学官网</a></li>
-                <li><a href="https://maker-freelance.com">开发者的博客</a></li>
+                <li><a href="https://Yaolou.Wang">开发者的博客</a></li>
             </ul>
         </div>
     </div>

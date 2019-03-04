@@ -4,7 +4,7 @@ ini_set("display_errors","Off");
 static 	$DB_HOST="localhost";
 static 	$DB_NAME="jol";
 static 	$DB_USER="root";
-static 	$DB_PASS="mysql666";
+static 	$DB_PASS="qaz10086110";
 // 首页信息配置
 static  $NOTICE="<p>本系统以在线编写(在线IDE)的形式上传源代码,现作为郑州市第五十七中学内网题库，测评环境为Linux,无法调用WindowsAPI以及其他SDK，推荐根据个人习惯选择合适的编辑器或IDE测试代码无误再复制提交，推荐：Dev-C++、MinGWStudio、VS Code。如有问题请加QQ交流群:<a target='_blank' href='//shang.qq.com/wpa/qunwpa?idkey=49f8cbfbc51ff7745d236f76cb9c1aadf308d43fb3461becf5986a2a92d4dcad'>878668254</a>进行反馈。</p>";
 static  $NOTICE_1_image="1.jpg";
